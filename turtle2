@@ -1,0 +1,55 @@
+#BEGINNER CLIENT LIBRARIES
+##########################
+
+#CHAPTER 1 USING COLCON TO BUILD PACKAGES
+
+sudo apt install python3-colcon-common-extensions
+#Use the command above to install colcon if it isnt installed already.
+
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+#Creating a directory 
+
+git clone https://github.com/ros2/examples src/examples -b foxy
+#cloning the repository
+
+colcon build --symlink-install
+This builds the colon workspace.
+
+colcon test
+#Testing colon packages.
+
+source install/setup.bash
+#Sourcing the environment.
+
+ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
+#Starting a subscriber node
+
+ros2 run examples_rclcpp_minimal_publisher publisher_member_function
+#Starting a publisher node.
+
+echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
+echo "export _colcon_cd_root=/opt/ros/foxy/" >> ~/.bashrc
+#Setting up colon CD.
+
+echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+#Setting up colon tab completion.
+
+
+
+#Chapter 2 Creating a Workspace
+
+#First of all, the ROS 2 environment has to be sourced.
+source /opt/ros/foxy/setup.bash
+
+#This is used to create a directory and move the terminal to the new directory.
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+
+#This clones a sample repository.
+git clone https://github.com/ros/ros_tutorials.git -b foxy-devel
+
+
+
+
+
