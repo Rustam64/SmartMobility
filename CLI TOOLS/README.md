@@ -120,8 +120,11 @@ To manually call empty service as can be seen in image chapter 5.4 'ros2 service
 This chapter covers the use of parameters in ROS2. It includes commands to list parameters, get and set parameter values, and save/load parameters. Additionally, it demonstrates how to run the TurtleSim node with preset parameters.
 
 To list parameters use 'ros2 param list' as in image chapter 6.1
+
 To get a parameter value use 'ros2 param get /turtlesim background_g' as seen in image chapter 6.2 and to edit it use 'ros2 param set /turtlesim background_r 150' as in image chapter 6.3
+
 To save parameters use 'ros2 param dump /turtlesim' and to load parameters use '# ros2 param load /turtlesim ./turtlesim.yaml'
+
 Lastly, to run ROS with preset parameters use 'ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml'
 
 
