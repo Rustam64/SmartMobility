@@ -177,6 +177,21 @@ The output can be seen in the image above.
 
             Recording ROS2 data.
 
+Follow instructions set in the shell file until line 16 to set-up the packages and environment.
+
+Run topic list to get a list of topics to choose from and then use 'ros2 topic echo <topic>' to capture data. An example can be seen in image chapter 10.1
+
+You should use 'ros2 bag record <topic>' to record data. An example can be seen in image chapter 10.2
+
+The following command is an example on how to change name(-o) and record multiple topics. 'ros2 bag record -o subset /turtle1/cmd_vel /turtle1/pose'
+
+You can get information on the recording using 'ros2 bag info <recording name>' An example can be seen in image chapter 10.3
+
+You can play a recording using 'ros2 bag play <recording name>' An example can be seen in image chapter 10.4
+
+
+
+
 
 
 
