@@ -109,4 +109,4 @@ ros2 service list returns a list of services as can be seen above and adding '-t
 
 'ros2 interface show turtlesim/srv/Spawn' This command outputs request and response arguments of 'Spawn' as can be seen in image chapter 5.3
 
-'ros2 service call /clear std_srvs/srv/Empty' is used to manually call the empty service as can be seen in image chapter 5.4
+'ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"' is used to manually call the empty service as can be seen in image chapter 5.4
