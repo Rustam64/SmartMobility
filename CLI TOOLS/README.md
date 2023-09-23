@@ -32,7 +32,7 @@ Turtlesim and turtle tele key can be seen in images below:
 <img width="554" alt="Chapter2 4" src="https://github.com/Rustam64/SmartMobility/assets/83468895/af1c9637-46f4-4f45-9632-067b74cf4bb2">
 
 
-            chapter2.4
+            ROS-2 graph after changing pen and spawning a 2nd turtle.
 
 Chapter 2 is quiet brief and goes over basic functions.  
 
@@ -46,6 +46,11 @@ The last code runs a new teleop window to control the 2nd turtle. The result can
 
 
 ## Chapter 3: Understanding nodes
+
+<img width="148" alt="chapter3 1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/7b2b936f-03c2-4bc9-bd73-e4386c516886">
+
+            List of nodes.
+
 
 This chapter goes over nodes, how they are connected and how to get information on a given node.
 
