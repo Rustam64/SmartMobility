@@ -21,10 +21,15 @@ Brief code to set-up the ROS and other settings.
 ## Chapter 2: Using turtlesim, ros2, and rqt
 
 Chapter 2 is quiet brief and goes over basic functions.  
-The first 2 codes mentioned run the basic ROS-2 windows, refer to images chapter2.1 and chapter2.2  
+
+The first 2 codes mentioned run the basic ROS-2 windows, refer to images chapter2.1 and chapter2.2
+
 The 3rd code runs rqt, result can be seen on image chapter2.3  
+
 Changine the pen color and size can be seen in chapter 2.4, the function can be found inside rqt under service caller.  
+
 The last code runs a new teleop window to control the 2nd turtle. The result can be seen in chapter 2.5  
+
 
 ## Chapter 3: Understanding nodes
 
