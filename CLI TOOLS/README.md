@@ -65,6 +65,11 @@ The 4th will return detailed information on a node as can be seen in image chapt
 
 ## Chapter 4: Understanding topics
 
+<img width="350" alt="chapter4 5" src="https://github.com/Rustam64/SmartMobility/assets/83468895/cd25a2a5-6276-4b10-af01-73da7363686c">
+
+            Ros Graph.
+
+
 This chapter is about topics in ROS2, how to view and manipulate them.
 
 The result of 'rqt_graph' can be seen on image chapter 4.1
@@ -89,5 +94,10 @@ An example of 'ros2 topic hz /turtle1/pose' can be seen on image chapter 4.10
 
 
 ## Chapter 5: Understanding services
+
+
+<img width="370" alt="chapter5 2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/0ba0bc4c-cffb-4cf2-a77a-b3ec58aeb935">
+
+            Service List.
 
 This chapter focuses on services which can either be ran thrugh rqt or the terminal.
