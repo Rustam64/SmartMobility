@@ -19,9 +19,8 @@ This repository contains code and instructions for working with the TurtleSim si
 Brief code to set-up the ROS and other settings.
 Turtlesim and turtle tele key can be seen in images below:
 
-<img width="621" alt="Chapter2 2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/fe703f6c-21e3-40ee-9f97-2773121d6b67">
 <img width="617" alt="Chapter2 1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/96c5e2fa-65af-4495-a3ef-a970eea863a0">
-
+<img width="621" alt="Chapter2 2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/fe703f6c-21e3-40ee-9f97-2773121d6b67">
 
 
 ## Chapter 2: Using turtlesim, ros2, and rqt
