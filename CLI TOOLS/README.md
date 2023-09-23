@@ -32,8 +32,6 @@ Changine the pen color and size can be seen in chapter 2.4, the function can be 
 The last code runs a new teleop window to control the 2nd turtle. The result can be seen in chapter 2.5  
 
 
-
-
 ## Chapter 3: Understanding nodes
 
 This chapter goes over nodes, how they are connected and how to get information on a given node.
@@ -45,8 +43,6 @@ The 2nd code will return a list od nodes as can be seen in image chapter 3.1
 The 3rd code will rename a node, in this case turtlesim to my_turtle.
 
 The 4th will return detailed information on a node as can be seen in image chapter 3.2
-
-
 
 
 ## Chapter 4: Understanding topics
