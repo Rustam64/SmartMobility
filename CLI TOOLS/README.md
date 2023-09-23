@@ -47,7 +47,7 @@ The last code runs a new teleop window to control the 2nd turtle. The result can
 
 ## Chapter 3: Understanding nodes
 
-<img width="148" alt="chapter3 1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/7b2b936f-03c2-4bc9-bd73-e4386c516886">
+<img width="300" alt="chapter3 1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/7b2b936f-03c2-4bc9-bd73-e4386c516886">
 
             List of nodes.
 
