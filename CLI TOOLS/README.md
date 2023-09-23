@@ -101,3 +101,5 @@ An example of 'ros2 topic hz /turtle1/pose' can be seen on image chapter 4.10
             Service List.
 
 This chapter focuses on services which can either be ran thrugh rqt or the terminal.
+
+
