@@ -20,19 +20,19 @@ Brief code to set-up the ROS and other settings.
 
 ## Chapter 2: Using turtlesim, ros2, and rqt
 
-Chapter 2 is quiet brief and goes over basic functions.
-The first 2 codes mentioned run the basic ROS-2 windows, refer to images chapter2.1 and chapter2.2
-The 3rd code runs rqt, result can be seen on image chapter2.3
-Changine the pen color and size can be seen in chapter 2.4, the function can be found inside rqt under service caller.
-The last code runs a new teleop window to control the 2nd turtle. The result can be seen in chapter 2.5
+Chapter 2 is quiet brief and goes over basic functions.  
+The first 2 codes mentioned run the basic ROS-2 windows, refer to images chapter2.1 and chapter2.2  
+The 3rd code runs rqt, result can be seen on image chapter2.3  
+Changine the pen color and size can be seen in chapter 2.4, the function can be found inside rqt under service caller.  
+The last code runs a new teleop window to control the 2nd turtle. The result can be seen in chapter 2.5  
 
 ## Chapter 3: Understanding nodes
 
-This chapter goes over nodes, how they are connected and how to get information on a given node.
-The first code is a set-up to run turtlesim. 
-The 2nd code will return a list od nodes as can be seen in image chapter 3.1
-The 3rd code will rename a node, in this case turtlesim to my_turtle.
-The 4th will return detailed information on a node as can be seen in image chapter 3.2
+This chapter goes over nodes, how they are connected and how to get information on a given node.  
+The first code is a set-up to run turtlesim.   
+The 2nd code will return a list od nodes as can be seen in image chapter 3.1  
+The 3rd code will rename a node, in this case turtlesim to my_turtle.  
+The 4th will return detailed information on a node as can be seen in image chapter 3.2  
 
 ## Chapter 4: Understanding topics
 
