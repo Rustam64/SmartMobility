@@ -11,7 +11,7 @@ This repository contains code and instructions for working with the TurtleSim si
 5. [Chapter 6: Understanding parameters](#chapter-6-understanding-parameters)
 6. [Chapter 7: Actions](#chapter-7-actions)
 7. [Chapter 8: Viewing Logs with rqt_console](#chapter-8-viewing-logs-with-rqt_console)
-8. [Chapter 9: Launching Nodes](#chapter-9-launching-nodes)
+8. [Chapter 9: Launching Nodes](#chapter9.sh)
 9. [Chapter 10: Recording and Playing Back Data](#chapter-10-recording-and-playing-back-data)
 
 
