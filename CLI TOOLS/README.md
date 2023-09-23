@@ -21,7 +21,11 @@ Turtlesim and turtle tele key can be seen in images below:
 
 <img width="617" alt="Chapter2 1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/96c5e2fa-65af-4495-a3ef-a970eea863a0">
 
+            turtlesim
+
 <img width="621" alt="Chapter2 2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/fe703f6c-21e3-40ee-9f97-2773121d6b67">
+
+            turtle teleop key
 
 ## Chapter 2: Using turtlesim, ros2, and rqt
 
