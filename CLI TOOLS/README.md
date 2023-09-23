@@ -110,3 +110,19 @@ To call the empty service 'ros2 interface show std_srvs/srv/Empty.srv' is used ,
 This command outputs request and response arguments of 'Spawn' as can be seen in image chapter 5.3 'ros2 interface show turtlesim/srv/Spawn' 
 
 To manually call empty service as can be seen in image chapter 5.4 'ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"' 
+
+## Chapter 6: Understanding Parameters
+
+<img width="623" alt="chapter6 3" src="https://github.com/Rustam64/SmartMobility/assets/83468895/606b44b7-c9ce-458d-b34f-4260f149ddf4">
+
+            Turtlesim after the background has been changed to purple.
+
+This chapter covers the use of parameters in ROS2. It includes commands to list parameters, get and set parameter values, and save/load parameters. Additionally, it demonstrates how to run the TurtleSim node with preset parameters.
+
+To list parameters use 'ros2 param list' as in image chapter 6.1
+To get a parameter value use 'ros2 param get /turtlesim background_g' as seen in image chapter 6.2 and to edit it use 'ros2 param set /turtlesim background_r 150' as in image chapter 6.3
+To save parameters use 'ros2 param dump /turtlesim' and to load parameters use '# ros2 param load /turtlesim ./turtlesim.yaml'
+Lastly, to run ROS with preset parameters use 'ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml'
+
+
+
