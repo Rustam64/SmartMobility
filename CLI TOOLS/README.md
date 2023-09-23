@@ -103,10 +103,10 @@ An example of 'ros2 topic hz /turtle1/pose' can be seen on image chapter 4.10
 This chapter focuses on services which can either be ran thrugh rqt or the terminal.
 
 
-ros2 service list returns a list of services as can be seen above and adding '-t' at the end will provide extra details.
+To get a list of services as can be seen above 'ros2 service list' as well as adding '-t' at the end will provide extra details.
 
-'ros2 interface show std_srvs/srv/Empty.srv' is used to call the empty service, as the empty service has no send/receive data it has no output.
+To call the empty service 'ros2 interface show std_srvs/srv/Empty.srv' is used , as the empty service has no send/receive data it has no output.
 
-'ros2 interface show turtlesim/srv/Spawn' This command outputs request and response arguments of 'Spawn' as can be seen in image chapter 5.3
+This command outputs request and response arguments of 'Spawn' as can be seen in image chapter 5.3 'ros2 interface show turtlesim/srv/Spawn' 
 
-'ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"' is used to manually call the empty service as can be seen in image chapter 5.4
+To manually call the empty service as can be seen in image chapter 5.4 'ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"' 
