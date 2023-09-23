@@ -25,6 +25,9 @@ Turtlesim and turtle tele key can be seen in images below:
 
 ## Chapter 2: Using turtlesim, ros2, and rqt
 
+<img width="554" alt="Chapter2 4" src="https://github.com/Rustam64/SmartMobility/assets/83468895/af1c9637-46f4-4f45-9632-067b74cf4bb2">
+            chapter2.4
+
 Chapter 2 is quiet brief and goes over basic functions.  
 
 The first 2 codes mentioned run the basic ROS-2 windows, refer to images chapter2.1 and chapter2.2
