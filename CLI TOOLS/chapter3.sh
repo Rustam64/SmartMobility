@@ -6,5 +6,8 @@ ros2 run turtlesim turtlesim_node
 ros2 node list
 #Run this command in a new terminal to see active nodes.
 
+ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
+#Renaming /turtlesim node to my_turtle.
+
 ros2 node info /my_turtle
 #This will return informatio on the selected node.
