@@ -1,0 +1,23 @@
+#CHAPTER 6 UNDERSTANDING PARAMETERS
+
+#Before starting the 2 lines below must be run in seperate terminals and every following line in yet another terminal.
+ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+
+ros2 param list
+#Results parameters of nodes.
+
+ros2 param get /turtlesim background_g
+#This returns the value of the background parameter(86, a color)
+
+ros2 param set /turtlesim background_r 150
+#This sets the background value to 150, changing the background color to purple.
+
+#IF you wish to save the parameters you can use the function below.
+ros2 param dump /turtlesim
+
+#ros2 param load /turtlesim ./turtlesim.yaml
+#This function is used to load previously saved parameters.
+
+ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml
+#Function used to load turtlesim with preset parameters.
