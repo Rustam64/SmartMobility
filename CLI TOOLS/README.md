@@ -130,4 +130,55 @@ To save parameters use 'ros2 param dump /turtlesim' and to load parameters use '
 Lastly, to run ROS with preset parameters use 'ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml'
 
 
+## Chapter 7: Actions
+
+<img width="621" alt="chapter7 4" src="https://github.com/Rustam64/SmartMobility/assets/83468895/96eb62de-fc00-4c79-b7be-7ac6966bb486">
+
+            Rotating the turtle manually by sending data via command line.
+
+To get a list of actions use 'ros2 action list' for reference see image chapter 7.2.
+
+To get information about an action use ros2 action info /turtle1/<name of action>
+
+To manually request an action use 'ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: 1.57}"' see images chapter 7.3 and 7.4
+
+Lastly, providing feedback by 'ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: -1.57}" --feedback'
+
+
+## Chapter 8: Viewing Logs with rqt_console
+
+<img width="655" alt="chapter8 2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/c6e93ccc-da73-47c3-ab30-78252dc4991f">
+
+            rqt console with feedback from the turtlesim and turtle tele-key.
+
+To run rqt_console: 'ros2 run rqt_console rqt_console' as can be seen in image chapter 8.1
+
+To move the turtle via cmd 'ros2 topic pub -r 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}"'
+
+The result of the following can be seen in the image chapter 8.2
+
+## Chapter 9: Launching Nodes
+
+<img width="503" alt="chapter9 1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/72673d5f-78e4-41a4-8606-d2f85838dd88">
+
+            Multisim launch.
+
+To create 2 turtlesim windows you can use 'ros2 launch turtlesim multisim.launch.py'
+
+To control TurtleSim1: 'ros2 topic pub /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"'
+
+To control TurtleSim2: 'ros2 topic pub /turtlesim2/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"'
+
+The output can be seen in the image above.
+
+## Chapter 10: Recording and Playing Back Data
+
+<img width="620" alt="chapter10 2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/1cdad10b-52e3-4656-a493-ae59175b1f2a">
+
+            Recording ROS2 data.
+
+
+
+
+
 
