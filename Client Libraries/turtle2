@@ -351,6 +351,7 @@ ros2 run py_srvcli client 2 3
 # Enter Ctrl+C in the server terminal to stop the node from spinning.
 
 
+
 #Chapter 8 - Creating custom msg and srv files
 
 # Create a new package named "tutorial_interfaces" in your ROS 2 workspace.
@@ -611,6 +612,8 @@ colcon build --packages-select cpp_parameters
 #And run the node using the launch file:
 ros2 launch cpp_parameters cpp_parameters_launch.py
 
+
+
 # Chapter 11 - Using parameters in a class (Python)
 
 # Create a new ROS 2 workspace named ros2_ws.
@@ -722,8 +725,10 @@ colcon build --packages-select python_parameters
 #And run the node using the launch file:
 ros2 launch python_parameters python_parameters_launch.py
 
-# Chapter 12 - Using ros2doctor to identify issues
 
+
+
+# Chapter 12 - Using ros2doctor to identify issues
 
 # Checking ROS 2 setup with ros2doctor.
 ros2 doctor
