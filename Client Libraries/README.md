@@ -97,7 +97,9 @@ Lastly, run all the set-up and dependencies and launch the talker along with the
 
 ## Chapter 6 - Writing a simple service and client (C++)
 
+![image](https://github.com/Rustam64/SmartMobility/assets/83468895/f56c62d7-2634-442f-9af0-9e5a5ce3d74f)
 
+    Nodes.
 
 Open a new terminal and ensure your ROS 2 installation is sourced.
 
@@ -168,3 +170,41 @@ Navigate back to the root of your workspace and build the package
 Open a new terminal and source the setup files of your workspace
 
 Start the service node and run the client node in another terminal with 2 integer arguments.
+
+
+## Chapter 7 Writing a simple service and client (Python)
+
+Open a new terminal and ensure your ROS 2 installation is sourced.
+
+Navigate to your ROS 2 workspace directory created in a previous tutorial (e.g., "ros2_ws").
+
+Go into the "src" directory within your workspace since packages should be created there.
+
+Create a new package named "py_srvcli" using the ament_python build type.
+
+Include dependencies on "rclpy" and "example_interfaces," which contains the .srv file.
+
+This command generates necessary files and folders for your package.
+
+Open the package.xml file for the "py_srvcli" package in your text editor.
+
+Fill in the <description>, <maintainer>, and <license> tags with appropriate information.
+
+Add the same information to the setup.py file for the maintainer, maintainer_email, description, and license fields.
+
+Ensure that the necessary dependencies ("rclpy" and "example_interfaces") are added automatically.
+
+Inside the "ros2_ws/src/py_srvcli/py_srvcli" directory, create a new file named "service_member_function.py."
+
+Paste the provided Python code within this file.
+
+This code defines a service node that receives two integers as a request and responds with their sum.
+
+To allow the "ros2 run" command to run your service node, add the following line between the 'console_scripts' brackets in setup.py: 'service = py_srvcli.service_member_function:main',
+
+Inside the "ros2_ws/src/py_srvcli/py_srvcli" directory, create a new file named "client_member_function.py."
+
+Paste the provided Python code within this file.
+
+This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
+
