@@ -101,115 +101,95 @@ Lastly, run all the set-up and dependencies and launch the talker along with the
 
     Nodes.
 
-Open a new terminal and ensure your ROS 2 installation is sourced.
+## Chapter 6 - Writing a Simple Service and Client (C++)
 
-Navigate to your ROS 2 workspace directory created in a previous tutorial (e.g., "ros2_ws").
+In this chapter, you'll learn how to create a simple service and client in ROS 2 using C++. The example involves creating a package, building it, and running a service and client node to add two integers.
 
-Go into the "src" directory within your workspace since packages should be created there.
+### Instructions:
 
-Create a new package named "cpp_srvcli" using the ament_cmake build type.
+1. Create a new ROS 2 package named "cpp_srvcli" with dependencies on "rclcpp" and "example_interfaces" using the following command:
+   ```
+   ros2 pkg create --build-type ament_cmake cpp_srvcli --dependencies rclcpp example_interfaces
+   ```
 
-Include dependencies on "rclcpp" and "example_interfaces," which contains the .srv file.
+2. Use `rosdep` to install dependencies for the package from the `src` directory:
+   ```
+   rosdep install -i --from-path src --rosdistro foxy -y
+   ```
 
-This command generates necessary files and folders for your package.
+3. Build the "cpp_srvcli" package using `colcon build --packages-select cpp_srvcli`.
 
-Create the package.
+4. Source the setup files to set up the ROS 2 environment:
+   ```
+   source install/setup.bash
+   ```
 
-Open the package.xml file for the "cpp_srvcli" package in your text editor.
+5. Start the service node:
+   ```
+   ros2 run cpp_srvcli server
+   ```
 
-Fill in the <description>, <maintainer>, and <license> tags with appropriate information.
+6. Run the client node with two integers as arguments to request addition:
+   ```
+   ros2 run cpp_srvcli client 2 3
+   ```
 
-Ensure that the necessary dependencies ("rclcpp" and "example_interfaces") are added automatically.
+## Chapter 7 - Writing a Simple Service and Client (Python)
 
-Inside the "ros2_ws/src/cpp_srvcli/src" directory, create a new file named "add_two_ints_server.cpp."
+This chapter covers creating a simple service and client in ROS 2 using Python. You will create a package, define a service server, and write a client that communicates with the server to add two integers.
 
-Paste the provided C++ code within this file.
+### Service Server (Python):
 
-This code defines a service node that receives two integers as a request and responds with their sum.
+1. Create a new ROS 2 package named "py_srvcli" with dependencies on "rclpy" and "example_interfaces."
 
-The "add" function processes the request and calculates the sum.
-It also logs the incoming request and the response.
+2. Implement a service server node (`MinimalService`) that adds two integers when a request is received.
 
+### Client (Python):
 
-The "main" function initializes ROS 2, creates a node named "add_two_ints_server," and advertises a service named "add_two_ints" for this node.
+3. Create a client node (`MinimalClientAsync`) that sends a request to the service server and receives a response.
 
-It then spins the node to make the service available.
+4. Source the setup files to set up the ROS 2 environment.
 
-Add the following code block to the CMakeLists.txt file to create an executable named "server" for the service node:
+5. Run the service node:
+   ```
+   ros2 run py_srvcli service
+   ```
 
-add_executable(server src/add_two_ints_server.cpp)
+6. Open another terminal, source the setup files again, and start the client node by providing two integers as arguments:
+   ```
+   ros2 run py_srvcli client 2 3
+   ```
 
-To make the executable discoverable by "ros2 run," add the following lines to install the target:
+7. The client node will send the request, and you will receive the result of the addition:
+   ```
+   [INFO] [minimal_client_async]: Result of add_two_ints: for 2 + 3 = 5
+   ```
 
-install(TARGETS
-    server
-  DESTINATION lib/${PROJECT_NAME})
-  
-Inside the "ros2_ws/src/cpp_srvcli/src" directory, create a new file named "add_two_ints_client.cpp."
+## Additional Notes for Python Service/Client:
 
-Paste the provided C++ code within this file.
+8. To enable running the client node using `ros2 run`, add the following line to the 'console_scripts' section in `setup.py`:
+   ```
+   'client = py_srvcli.client_member_function:main',
+   ```
 
-This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
+9. Before building, run `rosdep` in the root of your workspace ("ros2_ws") to check for missing dependencies:
+   ```
+   rosdep install -i --from-path src --rosdistro foxy -y
+   ```
 
-The "main" function initializes ROS 2, checks if the correct number of arguments are provided (two integers),
+10. Build the package in your workspace using `colcon build --packages-select py_srvcli`.
 
-creates a node named "add_two_ints_client," and creates a client for the "add_two_ints" service.
+11. Open a new terminal, navigate to your workspace ("ros2_ws"), and source the setup files:
+    ```
+    source install/setup.bash
+    ```
 
-It constructs a request with the provided integers and waits for the service to become available.
+12. Start the service node:
+    ```
+    ros2 run py_srvcli service
+    ```
 
-Once the service is available, it sends the request and waits for the response asynchronously.
-
-Finally, it prints the received sum or an error message.
-
-Update the CMakeLists.txt file to create an executable named "client" for the client node:
-
-Run rosdep in the root of your workspace (ros2_ws) to check for missing dependencies before building
-
-Navigate back to the root of your workspace and build the package
-
-Open a new terminal and source the setup files of your workspace
-
-Start the service node and run the client node in another terminal with 2 integer arguments.
-
-
-## Chapter 7 Writing a simple service and client (Python)
-
-Open a new terminal and ensure your ROS 2 installation is sourced.
-
-Navigate to your ROS 2 workspace directory created in a previous tutorial (e.g., "ros2_ws").
-
-Go into the "src" directory within your workspace since packages should be created there.
-
-Create a new package named "py_srvcli" using the ament_python build type.
-
-Include dependencies on "rclpy" and "example_interfaces," which contains the .srv file.
-
-This command generates necessary files and folders for your package.
-
-Open the package.xml file for the "py_srvcli" package in your text editor.
-
-Fill in the <description>, <maintainer>, and <license> tags with appropriate information.
-
-Add the same information to the setup.py file for the maintainer, maintainer_email, description, and license fields.
-
-Ensure that the necessary dependencies ("rclpy" and "example_interfaces") are added automatically.
-
-Inside the "ros2_ws/src/py_srvcli/py_srvcli" directory, create a new file named "service_member_function.py."
-
-Paste the provided Python code within this file.
-
-This code defines a service node that receives two integers as a request and responds with their sum.
-
-To allow the "ros2 run" command to run your service node, add the following line between the 'console_scripts' brackets in setup.py: 'service = py_srvcli.service_member_function:main',
-
-Inside the "ros2_ws/src/py_srvcli/py_srvcli" directory, create a new file named "client_member_function.py."
-
-Paste the provided Python code within this file.
-
-This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
-
-
-Sure, here are individual READMEs for each chapter of your code:
+13. In another terminal, you can run the client node with two integer arguments, as demonstrated above.
 
 ## Chapter 8 - Creating Custom Msg and Srv Files
 
@@ -350,5 +330,3 @@ This chapter focuses on creating and using plugins in ROS 2 using C++. It involv
 8. Source the setup files to set up the ROS 2 environment.
 
 9. Create a ROS 2 node that loads and uses the Square and Triangle plugins.
-
-These READMEs provide step-by-step instructions for each chapter, helping users understand and follow your code effectively.
