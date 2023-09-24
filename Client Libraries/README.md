@@ -124,7 +124,7 @@ Lastly, run all the set-up and dependencies and launch the talker along with the
     
 In this chapter, you'll learn how to create a simple service and client in ROS 2 using C++. The example involves creating a package, building it, and running a service and client node to add two integers.
 
-Instructions:
+## Instructions:
 
 1. Create a new ROS 2 package named "cpp_srvcli" with dependencies on "rclcpp" and "example_interfaces" using the following command:
    ```
@@ -161,7 +161,7 @@ Instructions:
 
 This chapter covers creating a simple service and client in ROS 2 using Python. You will create a package, define a service server, and write a client that communicates with the server to add two integers.
 
-Service Server (Python):
+## Service Server (Python):
 
 1. Create a new ROS 2 package named "py_srvcli" with dependencies on "rclpy" and "example_interfaces."
 
