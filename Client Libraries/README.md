@@ -99,71 +99,69 @@ Lastly, run all the set-up and dependencies and launch the talker along with the
 
 
 
-# Open a new terminal and ensure your ROS 2 installation is sourced.
+Open a new terminal and ensure your ROS 2 installation is sourced.
 
-# Navigate to your ROS 2 workspace directory created in a previous tutorial (e.g., "ros2_ws").
+Navigate to your ROS 2 workspace directory created in a previous tutorial (e.g., "ros2_ws").
 
-# Go into the "src" directory within your workspace since packages should be created there.
+Go into the "src" directory within your workspace since packages should be created there.
 
-# Create a new package named "cpp_srvcli" using the ament_cmake build type.
+Create a new package named "cpp_srvcli" using the ament_cmake build type.
 
-# Include dependencies on "rclcpp" and "example_interfaces," which contains the .srv file.
+Include dependencies on "rclcpp" and "example_interfaces," which contains the .srv file.
 
-# This command generates necessary files and folders for your package.
+This command generates necessary files and folders for your package.
 
 Create the package.
 
-# Open the package.xml file for the "cpp_srvcli" package in your text editor.
+Open the package.xml file for the "cpp_srvcli" package in your text editor.
 
-# Fill in the <description>, <maintainer>, and <license> tags with appropriate information.
+Fill in the <description>, <maintainer>, and <license> tags with appropriate information.
 
-# Ensure that the necessary dependencies ("rclcpp" and "example_interfaces") are added automatically.
+Ensure that the necessary dependencies ("rclcpp" and "example_interfaces") are added automatically.
 
-# Inside the "ros2_ws/src/cpp_srvcli/src" directory, create a new file named "add_two_ints_server.cpp."
+Inside the "ros2_ws/src/cpp_srvcli/src" directory, create a new file named "add_two_ints_server.cpp."
 
-# Paste the provided C++ code within this file.
+Paste the provided C++ code within this file.
 
-# This code defines a service node that receives two integers as a request and responds with their sum.
+This code defines a service node that receives two integers as a request and responds with their sum.
 
-# The "add" function processes the request and calculates the sum.
-# It also logs the incoming request and the response.
+The "add" function processes the request and calculates the sum.
+It also logs the incoming request and the response.
 
 
-# The "main" function initializes ROS 2, creates a node named "add_two_ints_server,"
+The "main" function initializes ROS 2, creates a node named "add_two_ints_server," and advertises a service named "add_two_ints" for this node.
 
-# and advertises a service named "add_two_ints" for this node.
+It then spins the node to make the service available.
 
-# It then spins the node to make the service available.
-
-# Add the following code block to the CMakeLists.txt file to create an executable named "server" for the service node:
+Add the following code block to the CMakeLists.txt file to create an executable named "server" for the service node:
 
 add_executable(server src/add_two_ints_server.cpp)
 
-# To make the executable discoverable by "ros2 run," add the following lines to install the target:
+To make the executable discoverable by "ros2 run," add the following lines to install the target:
 
 install(TARGETS
     server
   DESTINATION lib/${PROJECT_NAME})
   
-# Inside the "ros2_ws/src/cpp_srvcli/src" directory, create a new file named "add_two_ints_client.cpp."
+Inside the "ros2_ws/src/cpp_srvcli/src" directory, create a new file named "add_two_ints_client.cpp."
 
-# Paste the provided C++ code within this file.
+Paste the provided C++ code within this file.
 
-# This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
+This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
 
-# The "main" function initializes ROS 2, checks if the correct number of arguments are provided (two integers),
+The "main" function initializes ROS 2, checks if the correct number of arguments are provided (two integers),
 
-# creates a node named "add_two_ints_client," and creates a client for the "add_two_ints" service.
+creates a node named "add_two_ints_client," and creates a client for the "add_two_ints" service.
 
-# It constructs a request with the provided integers and waits for the service to become available.
+It constructs a request with the provided integers and waits for the service to become available.
 
-# Once the service is available, it sends the request and waits for the response asynchronously.
+Once the service is available, it sends the request and waits for the response asynchronously.
 
-# Finally, it prints the received sum or an error message.
+Finally, it prints the received sum or an error message.
 
-# Update the CMakeLists.txt file to create an executable named "client" for the client node:
+Update the CMakeLists.txt file to create an executable named "client" for the client node:
 
-# Run rosdep in the root of your workspace (ros2_ws) to check for missing dependencies before building
+Run rosdep in the root of your workspace (ros2_ws) to check for missing dependencies before building
 
 Navigate back to the root of your workspace and build the package
 
