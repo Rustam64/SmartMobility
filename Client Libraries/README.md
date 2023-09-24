@@ -21,3 +21,27 @@ Also run the publisher node using 'ros2 run examples_rclcpp_minimal_publisher pu
 Lastly set-up a colcon CD and Tab completion.
 
 
+## Chapter 2 Creating a Workspace
+
+<img width="816" alt="2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/69b0a23e-e7d8-43e7-97e4-b7c56f49a591">
+
+    Packages files after building a package.
+
+First of all, the ROS2 environment has to be sourced and a directory created.
+
+Afterwards, download the repository as shown and install dependencies, this can be seen in image 1 of chapter 2.
+
+Lastly, build the package. The resulting folder should look like in image 2 of chapter 2.
+
+## Chapter 3 Creating a package
+
+<img width="349" alt="thumbnail" src="https://github.com/Rustam64/SmartMobility/assets/83468895/5bbfb836-a598-4451-aef6-f9c996a5a308">
+
+    The workspace folder.
+
+Following instructions in the shell file, you will first create a package as shown in image 1 of chapter 3.
+
+Next, you will build the package using colcon as shown in image 2 of chapter 3.
+
+Lastly, you will source and run the package as shown in image 3 of chapter 3.
+
