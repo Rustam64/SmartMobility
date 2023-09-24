@@ -100,9 +100,7 @@ Lastly, run all the set-up and dependencies and launch the talker along with the
 ![image](https://github.com/Rustam64/SmartMobility/assets/83468895/f56c62d7-2634-442f-9af0-9e5a5ce3d74f)
 
     Nodes.
-
-## Chapter 6 - Writing a Simple Service and Client (C++)
-
+    
 In this chapter, you'll learn how to create a simple service and client in ROS 2 using C++. The example involves creating a package, building it, and running a service and client node to add two integers.
 
 ### Instructions:
@@ -135,6 +133,10 @@ In this chapter, you'll learn how to create a simple service and client in ROS 2
    ```
 
 ## Chapter 7 - Writing a Simple Service and Client (Python)
+
+![image](https://github.com/Rustam64/SmartMobility/assets/83468895/36281197-c5d8-483c-99d5-0ed46c06d89d)
+
+    Publisher and listener nodes.
 
 This chapter covers creating a simple service and client in ROS 2 using Python. You will create a package, define a service server, and write a client that communicates with the server to add two integers.
 
@@ -233,6 +235,11 @@ This chapter demonstrates how to create custom message (msg) and service (srv) f
 
 ## Chapter 9 - Implementing Custom Interfaces
 
+![image](https://github.com/Rustam64/SmartMobility/assets/83468895/8335d6b3-6360-4357-9af0-6c91eafd8e8a)
+
+    Address book.
+
+
 In this chapter, you'll learn how to create a custom message file and use it in a ROS 2 package. The example involves creating a package named "more_interfaces" and implementing a custom message file.
 
 ### Instructions:
@@ -254,6 +261,11 @@ In this chapter, you'll learn how to create a custom message file and use it in 
 6. Source the workspace and run the publisher node.
 
 ## Chapter 10 - Using Parameters in a Class (C++)
+
+![image](https://github.com/Rustam64/SmartMobility/assets/83468895/fe388b6f-6f55-46eb-8039-51a81ed005b7)
+
+    Minimal parameter node.
+
 
 This chapter guides you through creating a ROS 2 workspace and writing a C++ node that uses parameters. You will also learn how to change parameters via the console and launch files.
 
