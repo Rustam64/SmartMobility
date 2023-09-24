@@ -80,4 +80,17 @@ install(TARGETS
   talker
   DESTINATION lib/${PROJECT_NAME})
 
+
+  ## Chapter 5 Writing a simple publisher and subscriber (Python)
   
+<img width="737" alt="3" src="https://github.com/Rustam64/SmartMobility/assets/83468895/66ed3868-7772-4a02-a7dd-7e5276faeb75">
+
+    Publisher and Listener.
+
+Firstly, create a package as seen in the shell file. The output should match image 1 in chapter 5.
+
+Next, download the listener node, the out should match image 2 in chapter 5.
+
+Lastly, run all the set-up and dependencies and launch the talker along with the listener. The output should be simial to image 3 in chapter 5.
+
+
