@@ -143,34 +143,8 @@ ros2 run cpp_srvcli client 2 3
 
 #Chapter 7 - Writing a simple service and client (Python)
 
-# Open a new terminal and ensure your ROS 2 installation is sourced.
-# Navigate to your ROS 2 workspace directory created in a previous tutorial (e.g., "ros2_ws").
-# Go into the "src" directory within your workspace since packages should be created there.
-# Create a new package named "py_srvcli" using the ament_python build type.
-# Include dependencies on "rclpy" and "example_interfaces," which contains the .srv file.
-# This command generates necessary files and folders for your package.
-
 ros2 pkg create --build-type ament_python py_srvcli --dependencies rclpy example_interfaces
-
-# Open the package.xml file for the "py_srvcli" package in your text editor.
-# Fill in the <description>, <maintainer>, and <license> tags with appropriate information.
-# Ensure that the necessary dependencies ("rclpy" and "example_interfaces") are added automatically.
-
-<description>Python client server tutorial</description>
-<maintainer email="tim@email.com">Tim</maintainer>
-<license>Apache License 2.0</license>
-
-# Add the same information to the setup.py file for the maintainer, maintainer_email, description, and license fields:
-
-maintainer='Tim',
-maintainer_email='tim@email.com',
-description='Python client server tutorial',
-license='Apache License 2.0',
-
-
-# Inside the "ros2_ws/src/py_srvcli/py_srvcli" directory, create a new file named "service_member_function.py."
-# Paste the provided Python code within this file.
-# This code defines a service node that receives two integers as a request and responds with their sum.
+#Creating a package
 
 # The code imports necessary modules and defines a class named MinimalService.
 # The class constructor initializes the node, creates a service, and defines a callback function.
@@ -200,16 +174,6 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
-
-# To allow the "ros2 run" command to run your service node, add the following line between the 'console_scripts' brackets in setup.py:
-
-'service = py_srvcli.service_member_function:main',
-
-
-# Inside the "ros2_ws/src/py_srvcli/py_srvcli" directory, create a new file named "client_member_function.py."
-# Paste the provided Python code within this file.
-# This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
 
 # The code imports necessary modules and defines a class named MinimalClientAsync.
 # The class constructor initializes the node, creates a client, and defines a function to send the request.
