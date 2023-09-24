@@ -1,0 +1,120 @@
+#BEGINNER CLIENT LIBRARIES
+##########################
+
+#CHAPTER 1 USING COLCON TO BUILD PACKAGES
+
+sudo apt install python3-colcon-common-extensions
+#Use the command above to install colcon if it isnt installed already.
+
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+#Creating a directory 
+
+git clone https://github.com/ros2/examples src/examples -b foxy
+#cloning the repository
+
+colcon build --symlink-install
+This builds the colon workspace.
+
+colcon test
+#Testing colon packages.
+
+source install/setup.bash
+#Sourcing the environment.
+
+ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
+#Starting a subscriber node
+
+ros2 run examples_rclcpp_minimal_publisher publisher_member_function
+#Starting a publisher node.
+
+echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
+echo "export _colcon_cd_root=/opt/ros/foxy/" >> ~/.bashrc
+#Setting up colon CD.
+
+echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+#Setting up colon tab completion.
+
+
+
+#Chapter 2 Creating a Workspace
+
+#First of all, the ROS 2 environment has to be sourced.
+source /opt/ros/foxy/setup.bash
+
+#This is used to create a directory and move the terminal to the new directory.
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+
+#This clones a sample repository.
+git clone https://github.com/ros/ros_tutorials.git -b foxy-devel
+
+rosdep install -i --from-path src --rosdistro foxy -y
+#This resolves dependencies
+
+#To build the package
+colcon build
+
+
+
+#Chapter 3 Creating a package
+
+#To start off, move to the correct repository.
+cd ~/ros2_ws/src
+
+#Create a package named 'my_package'
+ros2 pkg create --build-type ament_cmake --node-name my_node my_package
+
+colcon build --packages-select my_package
+#Use this if you only need to run a specific package.
+
+source install/local_setup.bash
+#Source the set-up file.
+
+ros2 run my_package my_node
+#Use the package
+
+
+
+#Chapter 4 Writing a simple publisher and subscriber (C++)
+
+ros2 pkg create --build-type ament_cmake cpp_pubsub
+#Create a cpp_pubsub package.
+
+wget -O publisher_member_function.cpp https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_publisher/member_function.cpp
+#download the publisher node.
+
+wget -O subscriber_member_function.cpp https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_subscriber/member_function.cpp
+#Download the subscriber node.
+
+rosdep install -i --from-path src --rosdistro foxy -y
+#Install dependencies.
+
+colcon build --packages-select cpp_pubsub
+#Build the package.
+
+. install/setup.bash
+#Source set-up files.
+
+ros2 run cpp_pubsub talker
+#Run the talker node.
+
+
+
+#Chapter 5 Writing a simple publisher and subscriber (Python)
+
+ros2 pkg create --build-type ament_python py_pubsub
+#Creating a package
+
+wget https://raw.githubusercontent.com/ros2/examples/foxy/rclpy/topics/minimal_publisher/examples_rclpy_minimal_publisher/publisher_member_function.py
+#Downloading the talker node
+
+#After all the file edits:
+
+rosdep install -i --from-path src --rosdistro foxy -y
+colcon build --packages-select py_pubsub
+source install/setup.bash
+
+#And lastly, use the code below to launch the talker.
+ros2 run py_pubsub talker
+ros2 run py_pubsub listener
