@@ -12,7 +12,7 @@ This repository contains code and instructions for working with the TurtleSim si
 6. [Chapter 7: Actions](#chapter-7-actions)
 7. [Chapter 8: Viewing Logs with rqt_console](#chapter-8-viewing-logs-with-rqt_console)
 8. [Chapter 9: Launching Nodes](#chapter-9-launching-nodes)
-9. [Chapter 10: Recording and Playing Back Data]
+9. [Chapter 10: Recording and Playing Back Data](#chapter-10-recording-and-playing-back-data)
 
 
 ## Chapter 1: Environment set-up.
