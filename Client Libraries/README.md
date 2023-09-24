@@ -14,7 +14,7 @@ Welcome to the ROS 2 tutorials! This guide will walk you through various topics 
 10. [Using Parameters in a Class (C++)](#chapter-10-using-parameters-in-a-class-c)
 11. [Using Parameters in a Class (Python)](#chapter-11-using-parameters-in-a-class-python)
 12. [Using ros2doctor to Identify Issues](#chapter-12-using-ros2doctor-to-identify-issues)
-13. [Creating and Using Plugins (C++)](#chapter-13-creating-and-using-plugins-c)
+13. [Chapter 13 - Creating and Using Plugins (C++)](#chapter-13-creating-and-using-plugins-c)
 
 Feel free to jump to a specific chapter that interests you or follow along from the beginning. Happy learning!
 
