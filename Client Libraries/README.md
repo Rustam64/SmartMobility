@@ -45,3 +45,33 @@ Next, you will build the package using colcon as shown in image 2 of chapter 3.
 
 Lastly, you will source and run the package as shown in image 3 of chapter 3.
 
+
+## Chapter 4 Writing a simple publisher and subscriber (C++)
+
+<img width="455" alt="3" src="https://github.com/Rustam64/SmartMobility/assets/83468895/a5f8db56-380d-4d13-b2db-9a28373032a9">
+
+    Publisher node.
+
+Firstly, create a package following the instructions. The output should match image 1 in chapter 4.
+
+Next, you download the publisher and listener nodes using wget. The output can be seen in  image 2 in chapter 4.
+
+Download dependencies and build the file before sourcing set-up and running the talker node.
+
+Make sure the talker node mathces  image 3 in chapter 4. Also make sure to edit the maintainer, adding your name, email and licence.
+Also add these lines to the package.xml.
+<depend>rclcpp</depend>
+<depend>std_msgs</depend>
+
+In the CMakeLists.txt add the lines below:
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(talker src/publisher_member_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME})
+
+  
