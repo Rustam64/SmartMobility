@@ -208,3 +208,147 @@ Paste the provided Python code within this file.
 
 This code defines a client node that sends a request with two integers to the service node and receives the sum as a response.
 
+
+Sure, here are individual READMEs for each chapter of your code:
+
+## Chapter 8 - Creating Custom Msg and Srv Files
+
+This chapter demonstrates how to create custom message (msg) and service (srv) files in ROS 2. It also covers generating language-specific code and modifying ROS 2 packages to use these custom interfaces.
+
+### Instructions:
+
+1. Create a new package named "tutorial_interfaces" in your ROS 2 workspace using the following command:
+   ```
+   ros2 pkg create --build-type ament_cmake tutorial_interfaces
+   ```
+
+2. Inside the `tutorial_interfaces/msg` directory, create a new file called `Num.msg`. Define a custom message that transfers a single 64-bit integer called "num."
+
+3. Inside the `tutorial_interfaces/msg` directory, create a new file called `Sphere.msg`. Define a custom message that includes a message from another package (`geometry_msgs/Point`) and a float64 called "radius."
+
+4. Inside the `tutorial_interfaces/srv` directory, create a new file called `AddThreeInts.srv`. Define a custom service with a request containing three int64 fields (a, b, c) and a response containing a single int64 field called "sum."
+
+5. Modify the `CMakeLists.txt` file to find the `geometry_msgs` package and add code to generate interfaces for your custom messages and services.
+
+6. Modify the `package.xml` file to declare dependencies and build and execution dependencies.
+
+7. Build the "tutorial_interfaces" package to generate language-specific code using `colcon build`.
+
+8. Source the workspace to make the custom interfaces discoverable using `source install/setup.bash`.
+
+9. Check the message definitions using the 'ros2 interface show' command for `tutorial_interfaces/msg/Num`, `tutorial_interfaces/msg/Sphere`, and `tutorial_interfaces/srv/AddThreeInts`.
+
+10. Modify the publisher and subscriber nodes to use the custom `Num.msg` for publishing and receiving integer values. Add dependencies on `tutorial_interfaces` for both publisher and subscriber.
+
+11. Modify the client and server nodes to use the custom `AddThreeInts.srv` for requesting and responding with integers. Add dependencies on `tutorial_interfaces` for both server and client.
+
+12. Build the package that includes publisher, subscriber, client, and server nodes using `colcon build --packages-select <package_name>`.
+
+13. Run the nodes:
+    - Publisher: `ros2 run <package_name> talker`
+    - Subscriber: `ros2 run <package_name> listener`
+    - Client and Server: 
+      - Server: `ros2 run <package_name> server`
+      - Client: `ros2 run <package_name> client <arg1> <arg2> <arg3>`
+
+## Chapter 9 - Implementing Custom Interfaces
+
+In this chapter, you'll learn how to create a custom message file and use it in a ROS 2 package. The example involves creating a package named "more_interfaces" and implementing a custom message file.
+
+### Instructions:
+
+1. Create a new package named "more_interfaces" with the message directory using the command:
+   ```
+   ros2 pkg create --build-type ament_cmake more_interfaces
+   mkdir more_interfaces/msg
+   ```
+
+2. Create a custom message file named `AddressBook.msg` inside the `more_interfaces/msg` directory. Define fields for a custom message.
+
+3. Update the `package.xml` file to specify build and runtime dependencies.
+
+4. Update the `CMakeLists.txt` file to generate interfaces for your custom message.
+
+5. Create a node using the custom message and build it.
+
+6. Source the workspace and run the publisher node.
+
+## Chapter 10 - Using Parameters in a Class (C++)
+
+This chapter guides you through creating a ROS 2 workspace and writing a C++ node that uses parameters. You will also learn how to change parameters via the console and launch files.
+
+### Instructions:
+
+1. Create a new ROS 2 workspace named "ros2_ws."
+
+2. Create a package named "cpp_parameters" with dependencies on "rclcpp."
+
+3. Write a C++ node that declares a parameter, updates it in a timer callback, and builds the package.
+
+4. Source the setup files to set up the ROS 2 environment.
+
+5. Run the C++ node, change parameters via the console, and list parameters.
+
+6. Change parameters via a launch file.
+
+## Chapter 11 - Using Parameters in a Class (Python)
+
+This chapter demonstrates how to use parameters in a Python-based ROS 2 node. You will create a package, write a Python node that declares and updates parameters, and change parameters via the console and launch files.
+
+### Instructions:
+
+1. Create a new ROS 2 workspace named "ros2_ws."
+
+2. Create a package named "python_parameters" with dependencies on "rclpy."
+
+3. Write a Python node that declares a parameter, updates it in a timer callback, and builds the package.
+
+4. Source the setup files to set up the ROS 2 environment.
+
+5. Run the Python node, change parameters via the console, and list parameters.
+
+6. Change parameters via a launch file.
+
+## Chapter 12 - Using ros2doctor to Identify Issues
+
+This chapter covers using the `ros2doctor` tool to diagnose and report issues in your ROS 2 setup. It includes checking ROS 2 setup, launching nodes, and generating a detailed report.
+
+### Instructions:
+
+1. Run `ros2 doctor` to check
+
+ the ROS 2 setup.
+
+2. Start the turtlesim system and teleop controls in separate terminals.
+
+3. Run `ros2 doctor` again and check for system status.
+
+4. Create subscribers for topics to generate data.
+
+5. Run `ros2 doctor --report` to get a full report of your ROS 2 setup.
+
+## Chapter 13 - Creating and Using Plugins (C++)
+
+This chapter focuses on creating and using plugins in ROS 2 using C++. It involves creating a base package, defining a base class, creating plugin packages, and using the plugins in a ROS 2 node.
+
+### Instructions:
+
+1. Create a package named "polygon_base" to define the base class for plugins.
+
+2. Define the `RegularPolygon` base class with virtual methods for initialization and area calculation.
+
+3. Create a package named "polygon_plugins" to implement Square and Triangle plugin classes.
+
+4. Implement the Square and Triangle classes that inherit from the `RegularPolygon` base class.
+
+5. Create a `plugins.xml` file to declare the plugins.
+
+6. Export the plugin classes using `PLUGINLIB_EXPORT_CLASS`.
+
+7. Build the packages using `colcon build`.
+
+8. Source the setup files to set up the ROS 2 environment.
+
+9. Create a ROS 2 node that loads and uses the Square and Triangle plugins.
+
+These READMEs provide step-by-step instructions for each chapter, helping users understand and follow your code effectively.
