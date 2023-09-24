@@ -59,15 +59,21 @@ Next, you download the publisher and listener nodes using wget. The output can b
 Download dependencies and build the file before sourcing set-up and running the talker node.
 
 Make sure the talker node mathces  image 3 in chapter 4. Also make sure to edit the maintainer, adding your name, email and licence.
+
 Also add these lines to the package.xml.
+
 <depend>rclcpp</depend>
+
 <depend>std_msgs</depend>
 
 In the CMakeLists.txt add the lines below:
+
 find_package(rclcpp REQUIRED)
+
 find_package(std_msgs REQUIRED)
 
 add_executable(talker src/publisher_member_function.cpp)
+
 ament_target_dependencies(talker rclcpp std_msgs)
 
 install(TARGETS
