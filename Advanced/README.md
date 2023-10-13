@@ -1,5 +1,5 @@
 - [Chapter 1: Chapter 1: Enabling Topic Statistics (C++)](#chapter-1-enabling-topic-statistics-c++)
-- [Chapter 2: Using Fast DDS Discovery Server as a Discovery Protocol](##chapter-2-using-fast-dds-discovery-server-as-a-discovery-protocol)
+- [Chapter 2: Using Fast DDS Discovery Server as a Discovery Protocol](#chapter-2-using-fast-dds-discovery-server-as-a-discovery-protocol)
 - [Chapter 3: Implementing a Custom Memory Allocator](#chapter-3-implementing-a-custom-memory-allocator)
 - [Chapter 4: Unlocking the Potential of Fast DDS Middleware](#chapter-4-unlocking-the-potential-of-fast-dds-middleware)
 - [Chapter 5: Recording a Bag from a Node (C++)](#chapter-5-recording-a-bag-from-a-node-c)
