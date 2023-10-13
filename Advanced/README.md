@@ -5,8 +5,7 @@
 - [Chapter 5: Recording a Bag from a Node (C++)](#chapter-5-recording-a-bag-from-a-node-c)
 - [Chapter 6: Recording a Bag from a Node (Python)](#chapter-6-recording-a-bag-from-a-node-python)
 - [Chapter 7: Reading from a Bag File (C++)](#chapter-7-reading-from-a-bag-file-c)
-- [Chapter 9: Launching Nodes](#chapter-9-launching-nodes)
-- [Chapter 10: Recording and Playing Back Data](#chapter-10-recording-and-playing-back-data)
+
 
 You can click on any chapter to jump directly to the corresponding section in the README.
 
