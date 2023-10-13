@@ -1,12 +1,14 @@
-Chapter 1: Enabling Topic Statistics (C++)
-Chapter 2: Using Fast DDS Discovery Server as Discovery Protocol
-Chapter 3: Implementing a Custom Memory Allocator
-Chapter 4: Unlocking the Potential of Fast DDS Middleware
-Chapter 5: Recording a Bag from a Node (C++)
-Chapter 6: Recording a Bag from a Node (Python)
-Chapter 7: Reading from a Bag File (C++)
-Feel free to click on any chapter to jump directly to the corresponding section in the README.
+- [Chapter 1: Chapter 1: Enabling Topic Statistics (C++)](#chapter-1-enabling-topic-statistics-c++)
+- [Chapter 2: Using Fast DDS Discovery Server as a Discovery Protocol](#chapter-2-using-fast-dds-discovery-server-as-discovery-protocol)
+- [Chapter 3: Implementing a Custom Memory Allocator](#chapter-3-implementing-a-custom-memory-allocator)
+- [Chapter 4: Unlocking the Potential of Fast DDS Middleware](#chapter-4-unlocking-the-potential-of-fast-dds-middleware)
+- [Chapter 5: Recording a Bag from a Node (C++)](#chapter-5-recording-a-bag-from-a-node-c)
+- [Chapter 6: Recording a Bag from a Node (Python)](#chapter-6-recording-a-bag-from-a-node-python)
+- [Chapter 7: Reading from a Bag File (C++)](#chapter-7-reading-from-a-bag-file-c)
+- [Chapter 9: Launching Nodes](#chapter-9-launching-nodes)
+- [Chapter 10: Recording and Playing Back Data](#chapter-10-recording-and-playing-back-data)
 
+You can click on any chapter to jump directly to the corresponding section in the README.
 
 # Chapter 1: Enabling Topic Statistics (C++)
 
