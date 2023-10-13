@@ -11,6 +11,9 @@ You can click on any chapter to jump directly to the corresponding section in th
 
 # Chapter 1: Enabling Topic Statistics (C++)
 
+![2](https://github.com/Rustam64/SmartMobility/assets/83468895/775dc6d6-2fc5-4a6a-9109-56a1b6b008ef)
+
+
 ## Download the Listener File
 ```bash
 wget -O member_function_with_topic_statistics.cpp [listener_file]
@@ -45,6 +48,9 @@ ros2 topic echo /statistics
 
 # Chapter 2: Using Fast DDS Discovery Server as a Discovery Protocol
 
+<img width="740" alt="2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/5100ee7f-d3bd-4aca-a1f5-1bd190abf9e1">
+
+
 ## Launch a Server
 ```bash
 fastdds discovery --server-id 0
@@ -76,6 +82,9 @@ You can explore various configurations for ROS discovery servers and nodes.
 
 # Chapter 3: Implementing a Custom Memory Allocator
 
+<img width="371" alt="1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/4d8ee179-b6bf-4ffb-b73b-bcfc3ff4f32f">
+
+
 ## Code for Custom Memory Allocator
 - The code for the custom memory allocator can be found in [this link](https://github.com/ros2/demos/blob/humble/demo_nodes_cpp/src/topics/allocator_tutorial.cpp).
 
@@ -94,6 +103,9 @@ ros2 run demo_nodes_cpp allocator_tutorial intra
 ---
 
 # Chapter 4: Unlocking the Potential of Fast DDS Middleware
+
+<img width="371" alt="1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/972f64b4-18b5-490e-96b4-2b719aee19cc">
+
 
 ## Package and Node Setup
 1. Create a ROS 2 package and configure the necessary source files.
@@ -136,6 +148,9 @@ ros2 run sync_async_node_example_cpp ping_client
 
 # Chapter 5: Recording a Bag from a Node (C++)
 
+<img width="368" alt="2" src="https://github.com/Rustam64/SmartMobility/assets/83468895/1b7fc8a9-17e7-4e1b-a4e9-e8eee8fd5363">
+
+
 ## Install ROS Bag
 ```bash
 sudo apt install ros-humble-rosbag2
@@ -176,6 +191,9 @@ ros2 bag play my_bag
 
 # Chapter 6: Recording a Bag from a Node (Python)
 
+<img width="370" alt="4" src="https://github.com/Rustam64/SmartMobility/assets/83468895/3a2dfbcc-2c9e-43a5-b5f8-1efece65d3bc">
+
+
 ## Create a Python Package
 ```bash
 ros2 pkg create --build-type ament_python bag_recorder_nodes_py --dependencies rclpy rosbag2_py example_interfaces std_msgs
@@ -207,6 +225,9 @@ ros2 bag play my_bag
 ---
 
 # Chapter 7: Reading from a Bag File (C++)
+
+<img width="374" alt="1" src="https://github.com/Rustam64/SmartMobility/assets/83468895/fe7f4e5a-668a-463c-bdfb-64fcc1cf8f5b">
+
 
 ## Create a ROS 2 Package
 ```bash
