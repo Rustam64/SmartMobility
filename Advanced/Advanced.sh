@@ -1,4 +1,4 @@
-✨️✨️✨️ Enabling topic statistics (C++) ✨️✨️✨️
+Chapter 1. Enabling topic statistics (C++)
 
 wget -O member_function_with_topic_statistics.cpp https://raw.githubusercontent.com/ros2/examples/humble/rclcpp/topics/minimal_subscriber/member_function_with_topic_statistics.cpp
 #Downloading the listener file from github.
@@ -18,7 +18,7 @@ ros2 topic echo /statistics
 # View statistics on published data.
 
 
-✨️✨️✨️ Using Fast DDS Discovery Server as discovery protocol ✨️✨️✨️
+Chapter 2. Using Fast DDS Discovery Server as discovery protocol
 
 fastdds discovery --server-id 0
 #Launching a server
@@ -122,7 +122,7 @@ rqt_graph
 #Node graph using rqt
 
 
-✨️✨️✨️ Implementing a custom memory allocator ✨️✨️✨️
+Chapter 3. Implementing a custom memory allocator
 #The code for the custom memory allocator can be found in the link below:
 https://github.com/ros2/demos/blob/humble/demo_nodes_cpp/src/topics/allocator_tutorial.cpp
 
@@ -133,7 +133,7 @@ ros2 run demo_nodes_cpp allocator_tutorial intra
 # Run example exec with intra-process pipeline
 
 
-✨️✨️✨️ Unlocking the potential of Fast DDS middleware  ✨️✨️✨️
+Chapter 4. Unlocking the potential of Fast DDS middleware
 
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
@@ -188,7 +188,7 @@ ros2 run sync_async_node_example_cpp ping_client
 #Run the client node
 
 
-✨️✨️✨️ Recording a bag from a node ✨️✨️✨️
+Chapter 5. Recording a bag from a node
 
 sudo apt install ros-humble-rosbag2
 #Install rosbag
@@ -260,7 +260,7 @@ ros2 bag play big_synthetic_bag
 ros2 topic echo /synthetic
 #Print data
 
-✨️✨️✨️ Recording a bag from a node (Python) ✨️✨️✨️ 
+Chapter 6. Recording a bag from a node (Python)
 
 ros2 pkg create --build-type ament_python bag_recorder_nodes_py --dependencies rclpy rosbag2_py example_interfaces std_msgs
 #create the python package
@@ -327,7 +327,7 @@ ros2 bag play big_synthetic_bag
 ros2 topic echo /synthetic
 #Echo the synthetic data
 
-✨️✨️✨️ Reading from a bag file (C++) ✨️✨️✨️ 
+Chapter 7. Reading from a bag file (C++)
 
 ros2 pkg create --build-type ament_cmake --license Apache-2.0 bag_reading_cpp --dependencies rclcpp rosbag2_cpp turtlesim
 #Create the package
@@ -346,53 +346,3 @@ source install/setup.bash
 
 ros2 run bag_reading_cpp simple_bag_reader /path/to/setup
 #Run the node
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
