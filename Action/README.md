@@ -50,9 +50,10 @@ To build and use this package, follow these steps:
 
 - **Maintainer**: [Rustam](rrakhimov@email.com)
 
-## License
+- 
+<img width="461" alt="diagram" src="https://github.com/Rustam64/SmartMobility/assets/83468895/7259e171-4c26-4b5c-b646-b35ec44a1c27">
 
-This package is provided under a license to be determined. Please refer to the provided license information for details.
+
 
 ## Contributions and Issues
 
