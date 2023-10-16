@@ -36,6 +36,7 @@ To build and use this package, follow these steps:
    ```bash
    colcon build
    ```
+3. Run the server side CPP code to get the output.
 
 1. You can now use the custom "Mapping and Exploration" action in your ROS nodes and services by including the generated action interface files in your code. For example, in C++:
 
