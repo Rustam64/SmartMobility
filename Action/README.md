@@ -47,7 +47,7 @@ To build and use this package, follow these steps:
 
 ## Maintainer
 
-- **Maintainer**: [Your Name](mailto:your@email.com)
+- **Maintainer**: [Rustam](rrakhimov@email.com)
 
 ## License
 
@@ -55,6 +55,6 @@ This package is provided under a license to be determined. Please refer to the p
 
 ## Contributions and Issues
 
-Please report any issues or make contributions through the [GitHub repository](https://github.com/your-account/action_tutorials_interfaces). Your contributions are welcome!
+Please report any issues or make contributions through the [GitHub repository](https://github.com/Rustam64/SmartMobility/tree/main/Action). Your contributions are welcome!
 
 Feel free to customize this README with additional information specific to your package and its functionality. Make sure to include relevant details such as how to run your package, dependencies, and any specific usage instructions for your "Mapping and Exploration" action.
