@@ -9,7 +9,7 @@ This ROS 2 package, named "fleet," provides a fleet management system for effici
 
 ### Prerequisites
 
-- ROS 2 Galactic or later installed. You can follow the official ROS 2 installation instructions for your platform [here](https://docs.ros.org/en/galactic/Installation.html).
+- ROS 2 Foxy or later installed. You can follow the official ROS 2 installation instructions for your platform [here](https://docs.ros.org/en/foxy/Installation.html).
 
 ### Building the Package
 
